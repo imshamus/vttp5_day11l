@@ -3,11 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
+		<groupId>org.springframework.boot</groupId> <!--use to boot up the spring app-->
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	<!--whatever we put at the spring intializer, can change version only-->
 	<groupId>sg.edu.nus.iss</groupId>
 	<artifactId>vttp5a-day11l</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -27,13 +28,24 @@
 		<url/>
 	</scm>
 	<properties>
+	<!--must ensure your java version is correct, else app won't run-->
 		<java.version>23</java.version>
 	</properties>
+
 	<dependencies>
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency> -->
+
+		<!--using https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<version>3.3.5</version> <!--version is not impt, SB finds latest, unless?-->
 		</dependency>
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
